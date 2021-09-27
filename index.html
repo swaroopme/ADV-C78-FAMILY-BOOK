@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>
+            Project C78
+        </title>
+
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+    </head>
+    <body>
+        <center style="margin-top: 40px;">
+            <h1>
+                My Family Book
+            </h1>
+
+            <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" id="family_member_image" width="150px" height="200px">
+            <h4 id="family_member_name"></h4>
+            <button onclick="update();">Next</button>
+           <!-- Debug the above code to create a button with onclick functionality as given below-->
+            <!-- <button onclick="update();">Next</button>  -->
+          
+        </center>
+
+        <script>
+              var images = ["https://cdn.imgbin.com/0/13/15/imgbin-grandparent-grandfather-grandpa-grandpa-art-background-man-wearing-vest-and-dress-shirt-H2brpK9cxN4NRenzWkt0JRnAu.jpg","https://tse1.mm.bing.net/th?id=OIP.stU3zK0nuvoVcNgO5cXePAHaMO&pid=Api&P=0&w=300&h=300","https://tse3.mm.bing.net/th?id=OIP.2R6AUlVhpNYTCNBuc3T2ogHaE9&pid=Api&P=0&w=237&h=160","https://cdn5.vectorstock.com/i/1000x1000/45/09/cute-cartoon-of-a-young-mother-vector-4414509.jpg","https://www.pinclipart.com/picdir/big/552-5528115_cartoon-images-kids-clipart.png"];
+            var names = ["Chandrakant Kamble", "Rekha Kamble", "Bhushan Kamble", "Sarika Kamble", "Swaroop Kamble"];
+            var i = 0;
+            function update()
+            {
+                i++;
+                var numbers_of_family_member_in_array = 4
+                if(i > numbers_of_family_member_in_array )
+                {
+                    i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName  = names[i];
+                document.getElementById("family_member_image").src = updatedImage;
+                document.getElementById("family_member_name").innerHTML = updatedName;
+            }
+        </script>
+    </body>
+</html>
